@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="ejtKyF" name="PropzDatWorkz" projectType="guiapp" jucerVersion="5.4.3"
+              headerPath="../../Source">
+  <MAINGROUP id="FUlWkM" name="PropzDatWorkz">
+    <GROUP id="{CD1DD829-377A-2D37-27D0-2AC84D3423D3}" name="Resources">
+      <GROUP id="{FEC29756-3845-9543-B2FA-5B33A66FB9FB}" name="patterns">
+        <FILE id="kkn9I5" name="air.png" compile="0" resource="1" file="Resources/patterns/air.png"/>
+        <FILE id="Dm1Iqx" name="alicorn.png" compile="0" resource="1" file="Resources/patterns/alicorn.png"/>
+        <FILE id="dqQaal" name="blue_blazer.png" compile="0" resource="1" file="Resources/patterns/blue_blazer.png"/>
+        <FILE id="Io9r59" name="bold.png" compile="0" resource="1" file="Resources/patterns/bold.png"/>
+        <FILE id="EGTMId" name="bolder.png" compile="0" resource="1" file="Resources/patterns/bolder.png"/>
+        <FILE id="SjHDIV" name="candy.png" compile="0" resource="1" file="Resources/patterns/candy.png"/>
+        <FILE id="f9ZHa7" name="daybreak.png" compile="0" resource="1" file="Resources/patterns/daybreak.png"/>
+        <FILE id="GgwxMG" name="earth.png" compile="0" resource="1" file="Resources/patterns/earth.png"/>
+        <FILE id="qoIi8c" name="fire.png" compile="0" resource="1" file="Resources/patterns/fire.png"/>
+        <FILE id="iSyNHi" name="fireball.png" compile="0" resource="1" file="Resources/patterns/fireball.png"/>
+        <FILE id="ywd6Yq" name="flamebow.png" compile="0" resource="1" file="Resources/patterns/flamebow.png"/>
+        <FILE id="KUQ1lc" name="freedom.png" compile="0" resource="1" file="Resources/patterns/freedom.png"/>
+        <FILE id="SAgeSz" name="froth.png" compile="0" resource="1" file="Resources/patterns/froth.png"/>
+        <FILE id="bwZW9h" name="jammin.png" compile="0" resource="1" file="Resources/patterns/jammin.png"/>
+        <FILE id="nBVrQv" name="lantern.png" compile="0" resource="1" file="Resources/patterns/lantern.png"/>
+        <FILE id="H0PuCS" name="liquid_sugar.png" compile="0" resource="1"
+              file="Resources/patterns/liquid_sugar.png"/>
+        <FILE id="pAvsPh" name="love.png" compile="0" resource="1" file="Resources/patterns/love.png"/>
+        <FILE id="BHNOV1" name="microdots.png" compile="0" resource="1" file="Resources/patterns/microdots.png"/>
+        <FILE id="lDck87" name="petals.png" compile="0" resource="1" file="Resources/patterns/petals.png"/>
+        <FILE id="OBrBRy" name="pulse.png" compile="0" resource="1" file="Resources/patterns/pulse.png"/>
+        <FILE id="kq1lE2" name="rainbow.png" compile="0" resource="1" file="Resources/patterns/rainbow.png"/>
+        <FILE id="chCnI7" name="rainbow_dash.png" compile="0" resource="1"
+              file="Resources/patterns/rainbow_dash.png"/>
+        <FILE id="iQj8Ed" name="rainbow_drops.png" compile="0" resource="1"
+              file="Resources/patterns/rainbow_drops.png"/>
+        <FILE id="yo5eTd" name="solar_flare.png" compile="0" resource="1" file="Resources/patterns/solar_flare.png"/>
+        <FILE id="YbG6EA" name="spirit.png" compile="0" resource="1" file="Resources/patterns/spirit.png"/>
+        <FILE id="xhc0Vb" name="strobe.png" compile="0" resource="1" file="Resources/patterns/strobe.png"/>
+        <FILE id="mkBtSG" name="sunset.png" compile="0" resource="1" file="Resources/patterns/sunset.png"/>
+        <FILE id="vVbdO0" name="unicorns.png" compile="0" resource="1" file="Resources/patterns/unicorns.png"/>
+        <FILE id="bZAjpg" name="water.png" compile="0" resource="1" file="Resources/patterns/water.png"/>
+        <FILE id="zX5EvU" name="watermelon.png" compile="0" resource="1" file="Resources/patterns/watermelon.png"/>
+      </GROUP>
+    </GROUP>
+    <GROUP id="{1DDCB7F2-9855-7A0D-523B-53D9EE28F559}" name="Source">
+      <GROUP id="{62D6834B-82D4-EBA8-13ED-2538B943564D}" name="Audio">
+        <GROUP id="{90BB77D1-A32B-61C2-1980-6853C376A458}" name="ui">
+          <FILE id="juqPyD" name="AudioManagerHardwareEditor.cpp" compile="1"
+                resource="0" file="Source/Audio/ui/AudioManagerHardwareEditor.cpp"/>
+          <FILE id="Uy2Uzf" name="AudioManagerHardwareEditor.h" compile="0" resource="0"
+                file="Source/Audio/ui/AudioManagerHardwareEditor.h"/>
+        </GROUP>
+        <FILE id="Qq9StL" name="AudioManager.cpp" compile="1" resource="0"
+              file="Source/Audio/AudioManager.cpp"/>
+        <FILE id="Dl2wrX" name="AudioManager.h" compile="0" resource="0" file="Source/Audio/AudioManager.h"/>
+      </GROUP>
+      <GROUP id="{79602C2F-6420-84F5-8FAB-2E63ADC203AD}" name="Output">
+        <GROUP id="{300E4F8B-C8CD-3D7C-5089-AFCB4C058307}" name="ui">
+          <FILE id="TKJWo6" name="OutputManagerUI.cpp" compile="1" resource="0"
+                file="Source/Output/ui/OutputManagerUI.cpp"/>
+          <FILE id="yF3YMJ" name="OutputManagerUI.h" compile="0" resource="0"
+                file="Source/Output/ui/OutputManagerUI.h"/>
+        </GROUP>
+        <FILE id="wlJkef" name="Output.cpp" compile="1" resource="0" file="Source/Output/Output.cpp"/>
+        <FILE id="E8sJ54" name="Output.h" compile="0" resource="0" file="Source/Output/Output.h"/>
+        <FILE id="w4wMy9" name="OutputManager.cpp" compile="1" resource="0"
+              file="Source/Output/OutputManager.cpp"/>
+        <FILE id="bJby2b" name="OutputManager.h" compile="0" resource="0" file="Source/Output/OutputManager.h"/>
+      </GROUP>
+      <GROUP id="{541901FE-47AD-45F2-69FB-FD906C3C366F}" name="Timeline">
+        <GROUP id="{5763833E-A087-6BA7-672B-675BF58F2C80}" name="layers">
+          <GROUP id="{4430186D-F1CD-EAFE-0822-F87DA21EDE3D}" name="PatternLayer">
+            <GROUP id="{EC0A8895-A169-F04B-64CD-373528D8EDDB}" name="ui">
+              <FILE id="PYtkKj" name="PatternClipManagerUI.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternClipManagerUI.cpp"/>
+              <FILE id="uUjdxg" name="PatternClipManagerUI.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternClipManagerUI.h"/>
+              <FILE id="RRGFzJ" name="PatternClipUI.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternClipUI.cpp"/>
+              <FILE id="rLKOXD" name="PatternClipUI.h" compile="0" resource="0" file="Source/Timeline/layers/PatternLayer/ui/PatternClipUI.h"/>
+              <FILE id="Gn25da" name="PatternLayerPanel.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternLayerPanel.cpp"/>
+              <FILE id="wNhtim" name="PatternLayerPanel.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternLayerPanel.h"/>
+              <FILE id="KSLEQ9" name="PatternLayerTimeline.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternLayerTimeline.cpp"/>
+              <FILE id="rIFt8M" name="PatternLayerTimeline.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/PatternLayer/ui/PatternLayerTimeline.h"/>
+            </GROUP>
+            <FILE id="XEYuPu" name="PatternClip.cpp" compile="1" resource="0" file="Source/Timeline/layers/PatternLayer/PatternClip.cpp"/>
+            <FILE id="ZBLe95" name="PatternClip.h" compile="0" resource="0" file="Source/Timeline/layers/PatternLayer/PatternClip.h"/>
+            <FILE id="BJ2Q9v" name="PatternClipManager.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/PatternLayer/PatternClipManager.cpp"/>
+            <FILE id="N0LBv5" name="PatternClipManager.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/PatternLayer/PatternClipManager.h"/>
+            <FILE id="hVRXtH" name="PatternLayer.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/PatternLayer/PatternLayer.cpp"/>
+            <FILE id="V3l50o" name="PatternLayer.h" compile="0" resource="0" file="Source/Timeline/layers/PatternLayer/PatternLayer.h"/>
+          </GROUP>
+        </GROUP>
+        <FILE id="uSaYGV" name="PatternSequence.cpp" compile="1" resource="0"
+              file="Source/Timeline/PatternSequence.cpp"/>
+        <FILE id="uvv5Jl" name="PatternSequence.h" compile="0" resource="0"
+              file="Source/Timeline/PatternSequence.h"/>
+        <FILE id="dwcYos" name="TimelineEditor.cpp" compile="1" resource="0"
+              file="Source/Timeline/TimelineEditor.cpp"/>
+        <FILE id="dbCcoc" name="TimelineEditor.h" compile="0" resource="0"
+              file="Source/Timeline/TimelineEditor.h"/>
+      </GROUP>
+      <GROUP id="{D783735C-88B7-4B50-619E-2B43F3B81269}" name="Pattern">
+        <GROUP id="{D859C01E-9C9D-F847-C8AD-C0CAD65CDAE4}" name="ui">
+          <FILE id="hTG1mr" name="PatternManagerGridUI.cpp" compile="1" resource="0"
+                file="Source/Pattern/ui/PatternManagerGridUI.cpp"/>
+          <FILE id="Z1pDCc" name="PatternManagerGridUI.h" compile="0" resource="0"
+                file="Source/Pattern/ui/PatternManagerGridUI.h"/>
+          <FILE id="SqI8Tk" name="PatternUI.cpp" compile="1" resource="0" file="Source/Pattern/ui/PatternUI.cpp"/>
+          <FILE id="O0SU5W" name="PatternUI.h" compile="0" resource="0" file="Source/Pattern/ui/PatternUI.h"/>
+        </GROUP>
+        <FILE id="KvqUms" name="Pattern.cpp" compile="1" resource="0" file="Source/Pattern/Pattern.cpp"/>
+        <FILE id="FzQC76" name="Pattern.h" compile="0" resource="0" file="Source/Pattern/Pattern.h"/>
+        <FILE id="E2UaHu" name="PatternLibrary.cpp" compile="1" resource="0"
+              file="Source/Pattern/PatternLibrary.cpp"/>
+        <FILE id="oJrv8R" name="PatternLibrary.h" compile="0" resource="0"
+              file="Source/Pattern/PatternLibrary.h"/>
+      </GROUP>
+      <FILE id="sWEHSn" name="PDWEngine.cpp" compile="1" resource="0" file="Source/PDWEngine.cpp"/>
+      <FILE id="zPTWzA" name="PDWEngine.h" compile="0" resource="0" file="Source/PDWEngine.h"/>
+      <FILE id="lgmoX5" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="Pcovwf" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="V6BfqA" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_organicui" path="../../../../../Perso/Projects/JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../../../../Perso/Projects/JUCE Modules"/>
+        <MODULEPATH id="juce_osc" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../Softwares/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2017 targetFolder="Builds/VisualStudio2017">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_organicui" path="../../../../../Perso/Projects/JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../../../../Perso/Projects/JUCE Modules"/>
+        <MODULEPATH id="juce_osc" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../Softwares/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2017>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_organicui" path="../../../../../Perso/Projects/JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../../../../Perso/Projects/JUCE Modules"/>
+        <MODULEPATH id="juce_osc" path="../../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../Softwares/JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_organicui" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_timeline" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>
