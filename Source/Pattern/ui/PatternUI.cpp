@@ -36,7 +36,7 @@ void PatternUI::paint(Graphics & g)
 
 	g.drawImage(img, getLocalBounds().toFloat(), RectanglePlacement::centred);
 
-	if (isMouseOver())
+	if (isMouseOver() || img.getWidth() == 0)
 	{
 		g.setColour(BG_COLOR.darker().withAlpha(.2f));
 		g.fillRoundedRectangle(getLocalBounds().toFloat(), 2);

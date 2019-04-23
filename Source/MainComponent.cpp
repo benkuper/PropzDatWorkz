@@ -25,7 +25,7 @@ void MainComponent::init()
 	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Sequence Editor", &TimeMachineView::create));
 	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Outputs", &OutputManagerUI::create));
 
-	//ShapeShifterManager::getInstance()->setDefaultFileData(BinaryData::default_btlayout);
+	ShapeShifterManager::getInstance()->setDefaultFileData(BinaryData::default_pdwlayout);
 	ShapeShifterManager::getInstance()->setLayoutInformations("pdwlayout", "PDW/layouts");
 
 	OrganicMainContentComponent::init();

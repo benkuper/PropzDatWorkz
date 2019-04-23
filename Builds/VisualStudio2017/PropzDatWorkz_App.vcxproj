@@ -3468,6 +3468,7 @@
     <None Include="..\..\Resources\patterns\unicorns.png"/>
     <None Include="..\..\Resources\patterns\water.png"/>
     <None Include="..\..\Resources\patterns\watermelon.png"/>
+    <None Include="..\..\Resources\default.pdwlayout"/>
     <None Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_audio_formats\codecs\flac\Flac Licence.txt"/>
     <None Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_audio_formats\codecs\oggvorbis\Ogg Vorbis Licence.txt"/>
     <None Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_audio_processors\format_types\VST3_SDK\base\LICENSE.txt"/>

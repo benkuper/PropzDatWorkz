@@ -3929,6 +3929,88 @@ static const unsigned char temp_binary_data_29[] =
 
 const char* watermelon_png = (const char*) temp_binary_data_29;
 
+//================== default.pdwlayout ==================
+static const unsigned char temp_binary_data_30[] =
+"{\r\n"
+"  \"mainLayout\": {\r\n"
+"    \"type\": 1,\r\n"
+"    \"width\": 1920,\r\n"
+"    \"height\": 997,\r\n"
+"    \"direction\": 2,\r\n"
+"    \"shifters\": [\r\n"
+"      {\r\n"
+"        \"type\": 1,\r\n"
+"        \"width\": 1920,\r\n"
+"        \"height\": 997,\r\n"
+"        \"direction\": 1,\r\n"
+"        \"shifters\": [\r\n"
+"          {\r\n"
+"            \"type\": 0,\r\n"
+"            \"width\": 319,\r\n"
+"            \"height\": 997,\r\n"
+"            \"currentContent\": \"Pattern Library\",\r\n"
+"            \"tabs\": [\r\n"
+"              {\r\n"
+"                \"name\": \"Pattern Library\"\r\n"
+"              }\r\n"
+"            ]\r\n"
+"          },\r\n"
+"          {\r\n"
+"            \"type\": 0,\r\n"
+"            \"width\": 1092,\r\n"
+"            \"height\": 997,\r\n"
+"            \"currentContent\": \"Sequence Editor\",\r\n"
+"            \"tabs\": [\r\n"
+"              {\r\n"
+"                \"name\": \"Sequence Editor\"\r\n"
+"              }\r\n"
+"            ]\r\n"
+"          },\r\n"
+"          {\r\n"
+"            \"type\": 1,\r\n"
+"            \"width\": 497,\r\n"
+"            \"height\": 997,\r\n"
+"            \"direction\": 2,\r\n"
+"            \"shifters\": [\r\n"
+"              {\r\n"
+"                \"type\": 0,\r\n"
+"                \"width\": 497,\r\n"
+"                \"height\": 633,\r\n"
+"                \"currentContent\": \"Inspector\",\r\n"
+"                \"tabs\": [\r\n"
+"                  {\r\n"
+"                    \"name\": \"Inspector\"\r\n"
+"                  }\r\n"
+"                ]\r\n"
+"              },\r\n"
+"              {\r\n"
+"                \"type\": 0,\r\n"
+"                \"width\": 497,\r\n"
+"                \"height\": 358,\r\n"
+"                \"currentContent\": \"Sequences\",\r\n"
+"                \"tabs\": [\r\n"
+"                  {\r\n"
+"                    \"name\": \"Logger\"\r\n"
+"                  },\r\n"
+"                  {\r\n"
+"                    \"name\": \"Outputs\"\r\n"
+"                  },\r\n"
+"                  {\r\n"
+"                    \"name\": \"Sequences\"\r\n"
+"                  }\r\n"
+"                ]\r\n"
+"              }\r\n"
+"            ]\r\n"
+"          }\r\n"
+"        ]\r\n"
+"      }\r\n"
+"    ]\r\n"
+"  },\r\n"
+"  \"windows\": null\r\n"
+"}";
+
+const char* default_pdwlayout = (const char*) temp_binary_data_30;
+
 
 const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
 {
@@ -3970,6 +4052,7 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
         case 0x626b12c5:  numBytes = 11711; return unicorns_png;
         case 0xf3414301:  numBytes = 13911; return water_png;
         case 0x92ebe366:  numBytes = 6313; return watermelon_png;
+        case 0x09d9516f:  numBytes = 1783; return default_pdwlayout;
         default: break;
     }
 
@@ -4008,7 +4091,8 @@ const char* namedResourceList[] =
     "sunset_png",
     "unicorns_png",
     "water_png",
-    "watermelon_png"
+    "watermelon_png",
+    "default_pdwlayout"
 };
 
 const char* originalFilenames[] =
@@ -4042,7 +4126,8 @@ const char* originalFilenames[] =
     "sunset.png",
     "unicorns.png",
     "water.png",
-    "watermelon.png"
+    "watermelon.png",
+    "default.pdwlayout"
 };
 
 const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8)

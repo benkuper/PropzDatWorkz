@@ -34,6 +34,6 @@ Pattern::~Pattern()
 Pattern * Pattern::getEmptyPattern()
 {
 	Pattern * p = new Pattern("empty", 0, 3);
-	p->lfo1->setValue(.31f);
+	p->brightness->setValue(0);
 	return p;
 }

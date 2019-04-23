@@ -98,8 +98,11 @@ namespace BinaryData
     extern const char*   watermelon_png;
     const int            watermelon_pngSize = 6313;
 
+    extern const char*   default_pdwlayout;
+    const int            default_pdwlayoutSize = 1783;
+
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 30;
+    const int namedResourceListSize = 31;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

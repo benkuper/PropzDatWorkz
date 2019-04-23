@@ -39,6 +39,8 @@
         <FILE id="bZAjpg" name="water.png" compile="0" resource="1" file="Resources/patterns/water.png"/>
         <FILE id="zX5EvU" name="watermelon.png" compile="0" resource="1" file="Resources/patterns/watermelon.png"/>
       </GROUP>
+      <FILE id="QYuW2S" name="default.pdwlayout" compile="0" resource="1"
+            file="Resources/default.pdwlayout"/>
     </GROUP>
     <GROUP id="{1DDCB7F2-9855-7A0D-523B-53D9EE28F559}" name="Source">
       <GROUP id="{62D6834B-82D4-EBA8-13ED-2538B943564D}" name="Audio">

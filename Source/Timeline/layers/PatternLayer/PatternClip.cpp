@@ -82,11 +82,6 @@ void PatternClip::onContainerParameterChangedInternal(Parameter * p)
 				OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
 			}
 		}
-		else
-		{
-			ScopedPointer<Pattern> emptyPattern = Pattern::getEmptyPattern();
-			OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), emptyPattern);
-		}
 		
 	}else if (p == sourcePattern)
 	{
@@ -98,9 +93,9 @@ void PatternClip::onControllableFeedbackUpdateInternal(ControllableContainer * c
 {
 	LayerBlock::onControllableFeedbackUpdateInternal(cc, c);
 	Pattern * p = c->getParentAs<Pattern>();
-	if (p != nullptr)
+	if (p != nullptr && isActive->boolValue())
 	{
-		OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
+		//OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
 	}
 }
 

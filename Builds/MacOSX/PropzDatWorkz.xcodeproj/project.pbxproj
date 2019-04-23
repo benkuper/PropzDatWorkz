@@ -703,6 +703,13 @@
 			path = ../../JuceLibraryCode/JuceHeader.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		8A8EC9DE43BE81E3A4A2034B = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.pdwlayout;
+			name = default.pdwlayout;
+			path = ../../Resources/default.pdwlayout;
+			sourceTree = "SOURCE_ROOT";
+		};
 		8EA61FC48A8063BCB3D1BA1B = {
 			isa = PBXFileReference;
 			lastKnownFileType = image.png;
@@ -1108,6 +1115,7 @@
 			isa = PBXGroup;
 			children = (
 				3F5D5ADF5AAEBE3844A1EE3D,
+				8A8EC9DE43BE81E3A4A2034B,
 			);
 			name = Resources;
 			sourceTree = "<group>";

@@ -1,0 +1,77 @@
+{
+  "mainLayout": {
+    "type": 1,
+    "width": 1920,
+    "height": 997,
+    "direction": 2,
+    "shifters": [
+      {
+        "type": 1,
+        "width": 1920,
+        "height": 997,
+        "direction": 1,
+        "shifters": [
+          {
+            "type": 0,
+            "width": 319,
+            "height": 997,
+            "currentContent": "Pattern Library",
+            "tabs": [
+              {
+                "name": "Pattern Library"
+              }
+            ]
+          },
+          {
+            "type": 0,
+            "width": 1092,
+            "height": 997,
+            "currentContent": "Sequence Editor",
+            "tabs": [
+              {
+                "name": "Sequence Editor"
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "width": 497,
+            "height": 997,
+            "direction": 2,
+            "shifters": [
+              {
+                "type": 0,
+                "width": 497,
+                "height": 633,
+                "currentContent": "Inspector",
+                "tabs": [
+                  {
+                    "name": "Inspector"
+                  }
+                ]
+              },
+              {
+                "type": 0,
+                "width": 497,
+                "height": 358,
+                "currentContent": "Sequences",
+                "tabs": [
+                  {
+                    "name": "Logger"
+                  },
+                  {
+                    "name": "Outputs"
+                  },
+                  {
+                    "name": "Sequences"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "windows": null
+}

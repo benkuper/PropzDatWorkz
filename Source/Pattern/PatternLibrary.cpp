@@ -51,6 +51,11 @@ PatternLibrary::PatternLibrary() :
 	patterns.add(new Pattern("Sunset", 2, 8));
 	patterns.add(new Pattern("Daybreak", 2, 9));
 
+	for (int i = 0; i < 50; i++)
+	{
+		patterns.add(new Pattern("Bonus " + String(i + 1), 12, i));
+	}
+
 	for (auto &p : patterns) addChildControllableContainer(p);
 
 }

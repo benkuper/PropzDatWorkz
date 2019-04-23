@@ -11,6 +11,7 @@
 #include "PatternLayer.h"
 #include "ui/PatternLayerTimeline.h"
 #include "ui/PatternLayerPanel.h"
+#include "Output/OutputManager.h"
 
 PatternLayer::PatternLayer(Sequence * s, var) :
 	SequenceLayer(s, "Pattern Layer"),
@@ -53,6 +54,11 @@ void PatternLayer::sequenceCurrentTimeChanged(Sequence * s, float prevTime, bool
 		{
 			currentClipRef = currentClip;
 			currentClip->isActive->setValue(true);
+		}
+		else
+		{
+			ScopedPointer<Pattern> emptyPattern = Pattern::getEmptyPattern();
+			OutputManager::getInstance()->sendPatternData(groupID->intValue(), emptyPattern);
 		}
 	}
 }
