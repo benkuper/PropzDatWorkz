@@ -25,5 +25,7 @@ public:
 	StringParameter * remoteHost;
 	IntParameter * remotePort;
 
+	BoolParameter * logOutput;
+
 	void sendPatternData(int groupID, Pattern * p);
 };

@@ -53,6 +53,12 @@ void PatternClip::setPatternFromSource(Pattern * source)
 	}
 }
 
+void PatternClip::sendPatternData()
+{
+	OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
+	parametersChanged = false;
+}
+
 void PatternClip::setCoreLength(float value, bool stretch, bool stickToCoreEnd)
 {
 	LayerBlock::setCoreLength(value, stretch, stickToCoreEnd);
@@ -79,8 +85,13 @@ void PatternClip::onContainerParameterChangedInternal(Parameter * p)
 		{
 			if (currentPattern != nullptr)
 			{
-				OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
+				sendPatternData();
+				startTimerHz(20);
 			}
+		}
+		else
+		{
+			stopTimer();
 		}
 		
 	}else if (p == sourcePattern)
@@ -95,7 +106,7 @@ void PatternClip::onControllableFeedbackUpdateInternal(ControllableContainer * c
 	Pattern * p = c->getParentAs<Pattern>();
 	if (p != nullptr && isActive->boolValue())
 	{
-		//OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
+		parametersChanged = true;
 	}
 }
 
@@ -125,4 +136,12 @@ void PatternClip::loadJSONDataInternal(var data)
 		*/
 	}
 
+}
+
+void PatternClip::timerCallback()
+{
+	if (parametersChanged)
+	{
+		sendPatternData();
+	}
 }

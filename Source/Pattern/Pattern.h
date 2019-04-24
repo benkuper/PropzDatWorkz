@@ -27,10 +27,14 @@ public:
 	FloatParameter * brightness;
 	FloatParameter * speed;
 	FloatParameter * density;
+	
+	EnablingControllableContainer lfoContainer;
 	FloatParameter * lfo1;
 	FloatParameter * lfo2;
 	FloatParameter * lfo3;
 	FloatParameter * lfo4;
+
+	uint8 getActiveFlags();
 
 	static Pattern * getEmptyPattern();
 };

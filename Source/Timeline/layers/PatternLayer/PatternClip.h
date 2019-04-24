@@ -15,7 +15,8 @@
 class PatternLayer;
 
 class PatternClip :
-	public LayerBlock
+	public LayerBlock,
+	public Timer
 {
 public:
 	PatternClip(PatternLayer * layer = nullptr, float time = 0);
@@ -23,10 +24,13 @@ public:
 
 	PatternLayer * layer;
 	ScopedPointer<Pattern> currentPattern;
+	bool parametersChanged;
 
 	TargetParameter * sourcePattern;
 
 	void setPatternFromSource(Pattern * source);
+
+	void sendPatternData();
 
 	void setCoreLength(float value, bool stretch = false, bool stickToCoreEnd = false) override;
 
@@ -35,6 +39,8 @@ public:
 
 	var getJSONData() override;
 	void loadJSONDataInternal(var data) override;
+
+	void timerCallback() override;
 
 	String getTypeString() const override { return "PatternClip"; }
 };

@@ -82,7 +82,7 @@ void PatternClipUI::controllableFeedbackUpdateInternal(Controllable * c)
 
 bool PatternClipUI::isInterestedInDragSource(const SourceDetails & source)
 {
-	return false;// source.description.getProperty("type", "") == PatternModelUI::dragAndDropID.toString();
+	return source.description.getProperty("type", "") == PatternUI::dragAndDropId.toString();
 }
 
 void PatternClipUI::itemDragEnter(const SourceDetails & source)
