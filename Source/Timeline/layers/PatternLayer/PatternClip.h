@@ -23,7 +23,7 @@ public:
 	~PatternClip();
 
 	PatternLayer * layer;
-	ScopedPointer<Pattern> currentPattern;
+	std::unique_ptr<Pattern> currentPattern;
 	bool parametersChanged;
 
 	TargetParameter * sourcePattern;

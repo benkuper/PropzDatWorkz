@@ -22,6 +22,8 @@ public:
 	int page;
 	int mode;
 
+	BoolParameter* globalActive;
+
 	FloatParameter * hueOffset;
 	FloatParameter * saturation;
 	FloatParameter * brightness;

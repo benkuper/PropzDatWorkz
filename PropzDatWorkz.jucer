@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="ejtKyF" name="PropzDatWorkz" projectType="guiapp" jucerVersion="5.4.3"
+<JUCERPROJECT id="ejtKyF" name="PropzDatWorkz" projectType="guiapp" jucerVersion="5.4.5"
               headerPath="../../Source">
   <MAINGROUP id="FUlWkM" name="PropzDatWorkz">
     <GROUP id="{CD1DD829-377A-2D37-27D0-2AC84D3423D3}" name="Resources">
@@ -43,6 +43,39 @@
             file="Resources/default.pdwlayout"/>
     </GROUP>
     <GROUP id="{1DDCB7F2-9855-7A0D-523B-53D9EE28F559}" name="Source">
+      <GROUP id="{FDD27E9C-BE11-CC26-C5A3-C27B544B0B01}" name="Serial">
+        <GROUP id="{67B2DE22-830E-7BDD-4CD4-170FBAE39CFC}" name="lib">
+          <GROUP id="{5ECB7A7C-17EA-66C8-14A1-753187F8AD7C}" name="cobs">
+            <FILE id="v0055o" name="cobs.cpp" compile="1" resource="0" file="Source/Serial/lib/cobs/cobs.cpp"/>
+            <FILE id="NiM1Wi" name="cobs.h" compile="0" resource="0" file="Source/Serial/lib/cobs/cobs.h"/>
+          </GROUP>
+          <GROUP id="{62879BB1-11F2-B5EF-B314-9F6DDB8E3218}" name="serial">
+            <GROUP id="{CEE929AA-D7C3-689B-A09C-8A572D5E032E}" name="impl">
+              <GROUP id="{0510132D-12B9-B564-7C4C-C5403629E71E}" name="list_ports">
+                <FILE id="ak8cFZ" name="list_ports_linux.cc" compile="1" resource="0"
+                      file="Source/Serial/lib/serial/impl/list_ports/list_ports_linux.cc"/>
+                <FILE id="b0AxEz" name="list_ports_osx.cc" compile="1" resource="0"
+                      file="Source/Serial/lib/serial/impl/list_ports/list_ports_osx.cc"/>
+                <FILE id="G8n2uv" name="list_ports_win.cc" compile="1" resource="0"
+                      file="Source/Serial/lib/serial/impl/list_ports/list_ports_win.cc"/>
+              </GROUP>
+              <FILE id="Q7s8EV" name="unix.cc" compile="1" resource="0" file="Source/Serial/lib/serial/impl/unix.cc"/>
+              <FILE id="AbglDK" name="win.cc" compile="1" resource="0" file="Source/Serial/lib/serial/impl/win.cc"/>
+            </GROUP>
+            <FILE id="I5y0Sb" name="serial.cc" compile="1" resource="0" file="Source/Serial/lib/serial/serial.cc"/>
+          </GROUP>
+        </GROUP>
+        <FILE id="DJeSx1" name="SerialDevice.cpp" compile="1" resource="0"
+              file="Source/Serial/SerialDevice.cpp"/>
+        <FILE id="X8FOyT" name="SerialDevice.h" compile="0" resource="0" file="Source/Serial/SerialDevice.h"/>
+        <FILE id="qtc30C" name="SerialDeviceParameter.cpp" compile="1" resource="0"
+              file="Source/Serial/SerialDeviceParameter.cpp"/>
+        <FILE id="kH4VVT" name="SerialDeviceParameter.h" compile="0" resource="0"
+              file="Source/Serial/SerialDeviceParameter.h"/>
+        <FILE id="nTgHmh" name="SerialManager.cpp" compile="1" resource="0"
+              file="Source/Serial/SerialManager.cpp"/>
+        <FILE id="fiFIlU" name="SerialManager.h" compile="0" resource="0" file="Source/Serial/SerialManager.h"/>
+      </GROUP>
       <GROUP id="{62D6834B-82D4-EBA8-13ED-2538B943564D}" name="Audio">
         <GROUP id="{90BB77D1-A32B-61C2-1980-6853C376A458}" name="ui">
           <FILE id="juqPyD" name="AudioManagerHardwareEditor.cpp" compile="1"
@@ -55,6 +88,15 @@
         <FILE id="Dl2wrX" name="AudioManager.h" compile="0" resource="0" file="Source/Audio/AudioManager.h"/>
       </GROUP>
       <GROUP id="{79602C2F-6420-84F5-8FAB-2E63ADC203AD}" name="Output">
+        <GROUP id="{58656922-F100-BF01-04E2-E12576BEFEE2}" name="OSC">
+          <FILE id="ciUuAf" name="OSCOutput.cpp" compile="1" resource="0" file="Source/Output/OSC/OSCOutput.cpp"/>
+          <FILE id="d2AHnE" name="OSCOutput.h" compile="0" resource="0" file="Source/Output/OSC/OSCOutput.h"/>
+        </GROUP>
+        <GROUP id="{48DDAB03-C4EA-0093-D92D-7AC99A8C7550}" name="Serial">
+          <FILE id="aXbRco" name="SerialOutput.cpp" compile="1" resource="0"
+                file="Source/Output/Serial/SerialOutput.cpp"/>
+          <FILE id="Nr65Ax" name="SerialOutput.h" compile="0" resource="0" file="Source/Output/Serial/SerialOutput.h"/>
+        </GROUP>
         <GROUP id="{300E4F8B-C8CD-3D7C-5089-AFCB4C058307}" name="ui">
           <FILE id="TKJWo6" name="OutputManagerUI.cpp" compile="1" resource="0"
                 file="Source/Output/ui/OutputManagerUI.cpp"/>
@@ -132,10 +174,11 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX">
+    <XCODE_MAC targetFolder="Builds/MacOSX" customPList="&lt;plist&gt;&#10;&lt;dict&gt;&#10;&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;&#10;&#9;&lt;dict&gt;&#10;&#9;&#9;&lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;&#10;&#9;&#9;&lt;true/&gt;&#10;&#9;&lt;/dict&gt;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;"
+               hardenedRuntime="1" hardenedRuntimeOptions="com.apple.security.cs.allow-jit">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug"/>
-        <CONFIGURATION isDebug="0" name="Release"/>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="../../External/serial/include"/>
+        <CONFIGURATION isDebug="0" name="Release" headerPath="../../External/serial/include"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../../../../../Softwares/JUCE/modules"/>
@@ -156,34 +199,10 @@
         <MODULEPATH id="juce_audio_utils" path="../../../../../../Softwares/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2017 targetFolder="Builds/VisualStudio2017">
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile" extraLinkerFlags="-Wl,-rpath,&quot;lib&quot;&#10;-Wl,--as-needed">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug"/>
-        <CONFIGURATION isDebug="0" name="Release"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_audio_basics" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_core" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_organicui" path="../../../../../Perso/Projects/JUCE Modules"/>
-        <MODULEPATH id="juce_timeline" path="../../../../../Perso/Projects/JUCE Modules"/>
-        <MODULEPATH id="juce_osc" path="../../../../../../Softwares/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../../../../../Softwares/JUCE/modules"/>
-      </MODULEPATHS>
-    </VS2017>
-    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
-      <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug"/>
-        <CONFIGURATION isDebug="0" name="Release"/>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="../../External/serial/include"/>
+        <CONFIGURATION isDebug="0" name="Release" headerPath="../../External/serial/include"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../../../../../Softwares/JUCE/modules"/>
@@ -204,6 +223,30 @@
         <MODULEPATH id="juce_audio_utils" path="../../../../../../Softwares/JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
+    <VS2019 targetFolder="Builds/VisualStudio2019" externalLibraries="Setupapi.lib">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="0" name="Release" headerPath="../../External/serial/include"/>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="../../External/serial/include"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_timeline"/>
+        <MODULEPATH id="juce_osc"/>
+        <MODULEPATH id="juce_organicui"/>
+        <MODULEPATH id="juce_opengl"/>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_cryptography"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_utils"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
+      </MODULEPATHS>
+    </VS2019>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -226,5 +269,5 @@
   <LIVE_SETTINGS>
     <WINDOWS/>
   </LIVE_SETTINGS>
-  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" TIMELINE_USE_SEQUENCEMANAGER_SINGLETON="1"/>
 </JUCERPROJECT>

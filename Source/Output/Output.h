@@ -18,14 +18,10 @@ class Output :
 	public BaseItem
 {
 public:
-	Output();
-	~Output();
+	Output(const String &name = "Output");
+	virtual ~Output();
 
-	OSCSender sender;
-	StringParameter * remoteHost;
-	IntParameter * remotePort;
-
-	BoolParameter * logOutput;
-
-	void sendPatternData(int groupID, Pattern * p);
+	BoolParameter* logOutput;
+	virtual void sendPatternData(int groupID, Pattern* p);
+	virtual void sendPatternDataInternal(int groupID, Pattern* p) {}
 };

@@ -23,7 +23,7 @@ public:
 
 	PatternLayer * patternLayer;
 
-	ScopedPointer<IntStepperUI> groupUI;
+	std::unique_ptr<IntStepperUI> groupUI;
 
 	void resizedInternalContent(Rectangle<int> &r) override;
 

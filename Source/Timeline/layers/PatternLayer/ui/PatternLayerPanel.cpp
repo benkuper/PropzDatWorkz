@@ -16,8 +16,8 @@ PatternLayerPanel::PatternLayerPanel(PatternLayer * patternLayer) :
 	patternLayer(patternLayer)
 {
 	colorUI->setVisible(false);
-	groupUI = patternLayer->groupID->createStepper();
-	addAndMakeVisible(groupUI);
+	groupUI.reset(patternLayer->groupID->createStepper());
+	addAndMakeVisible(groupUI.get());
 }
 
 PatternLayerPanel::~PatternLayerPanel()

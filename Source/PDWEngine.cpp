@@ -29,10 +29,6 @@ PDWEngine::PDWEngine() :
 	sequenceFactory.defs.add(Factory<Sequence>::Definition::createDef("", "Patterns", &PatternSequence::create));
 	SequenceManager::getInstance()->managerFactory = &sequenceFactory;
 
-	
-	//Timeline
-	SequenceLayerFactory::getInstance()->layerDefs.add(SequenceLayerDefinition::createDef("Patterns", &PatternLayer::create));
-	SequenceLayerFactory::getInstance()->layerDefs.add(SequenceLayerDefinition::createDef("Audio", &AudioLayer::create));
 
 	//Communication
 	OSCRemoteControl::getInstance()->addRemoteControlListener(this);
@@ -43,7 +39,6 @@ PDWEngine::PDWEngine() :
 PDWEngine::~PDWEngine()
 {
 	PatternLibrary::deleteInstance();
-	SequenceLayerFactory::deleteInstance();
 	SequenceManager::deleteInstance();
 	OutputManager::deleteInstance();
 	AudioManager::deleteInstance();

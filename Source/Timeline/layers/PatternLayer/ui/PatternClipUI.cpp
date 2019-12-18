@@ -44,7 +44,7 @@ void PatternClipUI::paint(Graphics & g)
 		g.setTiledImageFill(img, 0, 0, clip->currentPattern->brightness->floatValue());
 		g.fillRoundedRectangle(getLocalBounds().toFloat(), 2);
 
-		if (isMouseOver())
+		if (isMouseOver() || img.getWidth() == 0)
 		{
 			g.setColour(TEXT_COLOR);
 			g.drawFittedText(clip->currentPattern->niceName, getLocalBounds(), Justification::centred, 2);

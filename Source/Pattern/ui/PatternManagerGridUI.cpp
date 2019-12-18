@@ -14,8 +14,8 @@
 PatternManagerGridUI::PatternManagerGridUI(StringRef name) :
 	ShapeShifterContentComponent(name)
 {
-	iconSizeUI = PatternLibrary::getInstance()->thumbSize->createSlider();
-	addAndMakeVisible(iconSizeUI); 
+	iconSizeUI.reset(PatternLibrary::getInstance()->thumbSize->createSlider());
+	addAndMakeVisible(iconSizeUI.get()); 
 	
 	viewport.setViewedComponent(&container, false);
 	viewport.setScrollBarsShown(true, false);

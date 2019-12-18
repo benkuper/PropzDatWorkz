@@ -14,11 +14,13 @@
 
 class PatternSequence :
 	public Sequence,
-	public SequenceLayerManager::Listener
+	public SequenceLayerManager::ManagerListener
 {
 public:
 	PatternSequence(var params = var());
 	~PatternSequence();
+
+	Factory<SequenceLayer> layerFactory;
 
 	void itemAdded(SequenceLayer * s) override;
 	

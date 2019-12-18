@@ -27,7 +27,7 @@ public:
 	const int headerHeight = 16;
 	const int headerGap = 4;
 
-	ScopedPointer<IntSliderUI> iconSizeUI; 
+	std::unique_ptr<IntSliderUI> iconSizeUI; 
 	OwnedArray<PatternUI> patternUIs;
 
 	void resized() override;

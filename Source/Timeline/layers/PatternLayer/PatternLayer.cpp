@@ -18,7 +18,7 @@ PatternLayer::PatternLayer(Sequence * s, var) :
 	patternClipManager(this),
 	currentClip(nullptr)
 {
-	groupID = addIntParameter("Group ID", "The ID of the group to target", 1, 1, 5); 
+	groupID = addIntParameter("Group ID", "The ID of the group to target", 1, 1, 60000); 
 
 	Colour col = Colours::white;
 
@@ -28,6 +28,8 @@ PatternLayer::PatternLayer(Sequence * s, var) :
 		col = colors[groupID->intValue() - 1];
 	}
 	color->setColor(col);
+	
+	addChildControllableContainer(&patternClipManager);
 }
 
 PatternLayer::~PatternLayer()
@@ -57,8 +59,8 @@ void PatternLayer::sequenceCurrentTimeChanged(Sequence * s, float prevTime, bool
 		}
 		else
 		{
-			ScopedPointer<Pattern> emptyPattern = Pattern::getEmptyPattern();
-			OutputManager::getInstance()->sendPatternData(groupID->intValue(), emptyPattern);
+			std::unique_ptr<Pattern> emptyPattern(Pattern::getEmptyPattern());
+			OutputManager::getInstance()->sendPatternData(groupID->intValue(), emptyPattern.get());
 		}
 	}
 }
@@ -74,7 +76,7 @@ void PatternLayer::onContainerParameterChangedInternal(Parameter * p)
 		if (groupID->intValue() >= 1 || groupID->intValue() <= 5)
 		{
 			const Colour colors[5]{ Colours::orange, Colours::green, Colours::aqua, Colours::blue, Colours::purple };
-			col = colors[groupID->intValue() - 1];
+			col = colors[(groupID->intValue() - 1)%5];
 		}
 		color->setColor(col);
 	}

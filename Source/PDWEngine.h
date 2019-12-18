@@ -21,6 +21,7 @@ public:
 	~PDWEngine();	
 
 	Factory<Sequence> sequenceFactory;
+	Factory<SequenceLayer> layerFactory;
 
 	void clearInternal() override;
 

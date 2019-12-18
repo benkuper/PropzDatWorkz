@@ -24,8 +24,8 @@ public:
 	void initialiseInternal(const String& commandLine) override
 	{
 		AppUpdater::getInstance()->setURLs(URL("http://benjamin.kuperberg.fr/pdw/update.json"), "http://benjamin.kuperberg.fr/pdw/download/", "Bento");
-		engine = new PDWEngine();
-		mainComponent = new MainComponent();
+		engine.reset(new PDWEngine());
+		mainComponent.reset(new MainComponent());
 	}
 };
 

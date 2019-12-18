@@ -10,12 +10,17 @@
 
 #include "PatternSequence.h"
 #include "Audio/AudioManager.h"
+#include "Timeline/layers/PatternLayer/PatternLayer.h"
 
 PatternSequence::PatternSequence(var params)
 {
 	setAudioDeviceManager(&AudioManager::getInstance()->am);
 	DBG("Here" << AudioManager::getInstance()->niceName);
 	layerManager->addBaseManagerListener(this);
+
+	layerFactory.defs.add(SequenceLayerManager::LayerDefinition::createDef("", "Patterns", PatternLayer::create, this));
+	layerFactory.defs.add(SequenceLayerManager::LayerDefinition::createDef("", "Audio", AudioLayer::create, this));
+	layerManager->managerFactory = &layerFactory;
 }
 
 PatternSequence::~PatternSequence()

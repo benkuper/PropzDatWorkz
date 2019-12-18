@@ -9,9 +9,10 @@
 */
 
 #include "PatternClipManager.h"
+#include "PatternLayer.h"
 
 PatternClipManager::PatternClipManager(PatternLayer * layer) :
-	LayerBlockManager("Patterns"),
+	LayerBlockManager(layer, "Patterns"),
 	layer(layer)
 {
 	itemDataType = "PatternClip";

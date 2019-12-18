@@ -23,6 +23,7 @@ public:
 	OutputManager();
 	~OutputManager();
 
+	Factory<Output> factory;
 
 	void sendPatternData(int groupID, Pattern * p);
 };

@@ -38,24 +38,28 @@ void PatternClip::setPatternFromSource(Pattern * source)
 
 	if (currentPattern != nullptr)
 	{
-		removeChildControllableContainer(currentPattern);
+		removeChildControllableContainer(currentPattern.get());
 		//currentPattern->removeLightBlockListener(this);
 		currentPattern = nullptr;
 	}
 
-	//if (provider != nullptr) currentPattern = new LightBlock(provider);
-	currentPattern = new Pattern(source->niceName, source->page, source->mode);
-
-	if (currentPattern != nullptr)
+	if (source != nullptr)
 	{
-		addChildControllableContainer(currentPattern);
-		//currentPattern->addLightBlockListener(this);
+		//if (provider != nullptr) currentPattern = new LightBlock(provider);
+		currentPattern.reset(new Pattern(source->niceName, source->page, source->mode));
+
+		if (currentPattern != nullptr)
+		{
+			addChildControllableContainer(currentPattern.get());
+			//currentPattern->addLightBlockListener(this);
+		}
 	}
+	
 }
 
 void PatternClip::sendPatternData()
 {
-	OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern);
+	OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern.get());
 	parametersChanged = false;
 }
 
@@ -97,6 +101,7 @@ void PatternClip::onContainerParameterChangedInternal(Parameter * p)
 	}else if (p == sourcePattern)
 	{
 		setPatternFromSource(dynamic_cast<Pattern *>(sourcePattern->targetContainer.get()));
+		parametersChanged = true;
 	}
 }
 
