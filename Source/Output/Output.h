@@ -21,7 +21,14 @@ public:
 	Output(const String &name = "Output");
 	virtual ~Output();
 
-	BoolParameter* logOutput;
-	virtual void sendPatternData(int groupID, Pattern* p);
-	virtual void sendPatternDataInternal(int groupID, Pattern* p) {}
+	BoolParameter* logIncoming;
+	BoolParameter* logOutgoing;
+	Trigger* syncTrigger;
+
+
+	virtual void onContainerTriggerTriggered(Trigger* t) override;
+
+	virtual void sendSync() {}
+	virtual void sendPatternData(int groupID, bool publicGroup, Pattern* p);
+	virtual void sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p) {}
 };

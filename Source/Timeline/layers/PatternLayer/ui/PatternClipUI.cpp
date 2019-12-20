@@ -78,6 +78,10 @@ void PatternClipUI::controllableFeedbackUpdateInternal(Controllable * c)
 			img = ImageCache::getFromMemory(BinaryData::getNamedResource(s.getCharPointer(), dataSize), dataSize);
 		}
 	}
+	else if (clip->currentPattern != nullptr && c == clip->currentPattern->brightness)
+	{
+		repaint();
+	}
 }
 
 bool PatternClipUI::isInterestedInDragSource(const SourceDetails & source)

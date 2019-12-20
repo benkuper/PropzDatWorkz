@@ -59,7 +59,7 @@ void PatternClip::setPatternFromSource(Pattern * source)
 
 void PatternClip::sendPatternData()
 {
-	OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(), currentPattern.get());
+	OutputManager::getInstance()->sendPatternData(layer->groupID->intValue(),  layer->groupIsPublic->boolValue(), currentPattern.get());
 	parametersChanged = false;
 }
 

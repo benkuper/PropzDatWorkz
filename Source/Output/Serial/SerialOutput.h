@@ -31,9 +31,14 @@ public:
 
 	void onContainerParameterChangedInternal(Parameter* p) override;
 
-	void sendPatternDataInternal(int groupID, Pattern* p) override;
-
+	void portRemoved(SerialDevice* p) override;
+	void portClosed(SerialDevice* p) override;
 	void serialDataReceived(const var& data) override;
+
+
+	void sendSync() override;
+	void sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p) override;
+
 
 	String getTypeString() const override { return "Serial"; }
 	static SerialOutput* create(var params) { return new SerialOutput(); }

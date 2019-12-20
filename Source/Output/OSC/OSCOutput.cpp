@@ -24,11 +24,12 @@ OSCOutput::~OSCOutput()
 {
 }
 
-void OSCOutput::sendPatternDataInternal(int groupID, Pattern* p)
+void OSCOutput::sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p)
 {
 	OSCMessage m("/pattern");
 
 	m.addInt32(groupID);
+	m.addInt32(publicGroup ? 1 : 0);
 	m.addInt32(p->page);
 	m.addInt32(p->mode);
 
@@ -48,7 +49,7 @@ void OSCOutput::sendPatternDataInternal(int groupID, Pattern* p)
 
 	sender.sendToIPAddress(remoteHost->stringValue(), remotePort->intValue(), m);
 
-	if (logOutput->boolValue())
+	if (logOutgoing->boolValue())
 	{
 		String s = "Send " + m.getAddressPattern().toString() + " :";
 		for (int i = 0; i < m.size(); i++)

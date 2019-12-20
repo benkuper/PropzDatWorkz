@@ -19,14 +19,16 @@ PatternLayer::PatternLayer(Sequence * s, var) :
 	currentClip(nullptr)
 {
 	groupID = addIntParameter("Group ID", "The ID of the group to target", 1, 1, 60000); 
+	groupIsPublic = addBoolParameter("Public", "If checked, then use public groups", false);
 
-	Colour col = Colours::white;
+	Colour col = BG_COLOR;
 
-	if (groupID->intValue() >= 1 || groupID->intValue() <= 5)
+	if (groupID->intValue() >= 1 || groupID->intValue() <= 5 && groupIsPublic->boolValue())
 	{
 		const Colour colors[5]{ Colours::orange, Colours::green, Colours::aqua, Colours::blue, Colours::purple };
 		col = colors[groupID->intValue() - 1];
 	}
+
 	color->setColor(col);
 	
 	addChildControllableContainer(&patternClipManager);
@@ -60,7 +62,7 @@ void PatternLayer::sequenceCurrentTimeChanged(Sequence * s, float prevTime, bool
 		else
 		{
 			std::unique_ptr<Pattern> emptyPattern(Pattern::getEmptyPattern());
-			OutputManager::getInstance()->sendPatternData(groupID->intValue(), emptyPattern.get());
+			OutputManager::getInstance()->sendPatternData(groupID->intValue(), groupIsPublic->boolValue(), emptyPattern.get());
 		}
 	}
 }
@@ -73,7 +75,7 @@ void PatternLayer::onContainerParameterChangedInternal(Parameter * p)
 	{
 		Colour col = Colours::white;
 		
-		if (groupID->intValue() >= 1 || groupID->intValue() <= 5)
+		if (groupID->intValue() >= 1 || groupID->intValue() <= 5 && groupIsPublic->boolValue())
 		{
 			const Colour colors[5]{ Colours::orange, Colours::green, Colours::aqua, Colours::blue, Colours::purple };
 			col = colors[(groupID->intValue() - 1)%5];

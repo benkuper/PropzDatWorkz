@@ -29,7 +29,7 @@ OutputManager::~OutputManager()
 {
 }
 
-void OutputManager::sendPatternData(int groupID, Pattern * p)
+void OutputManager::sendPatternData(int groupID, bool publicGroup, Pattern * p)
 {
-	for (auto &o : items) o->sendPatternData(groupID, p);
+	for (auto &o : items) o->sendPatternData(groupID, publicGroup, p);
 }

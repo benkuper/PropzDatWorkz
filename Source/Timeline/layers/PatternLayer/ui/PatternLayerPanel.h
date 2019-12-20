@@ -24,6 +24,7 @@ public:
 	PatternLayer * patternLayer;
 
 	std::unique_ptr<IntStepperUI> groupUI;
+	std::unique_ptr<BoolToggleUI> publicUI;
 
 	void resizedInternalContent(Rectangle<int> &r) override;
 

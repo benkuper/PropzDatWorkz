@@ -24,6 +24,7 @@ SerialOutput::SerialOutput() :
 
 SerialOutput::~SerialOutput()
 {
+	setCurrentPort(nullptr);
 }
 
 void SerialOutput::setCurrentPort(SerialDevice* _port)
@@ -68,7 +69,25 @@ void SerialOutput::onContainerParameterChangedInternal(Parameter* p)
 	}
 }
 
-void SerialOutput::sendPatternDataInternal(int groupID, Pattern* p)
+void SerialOutput::sendSync()
+{
+	if (port == nullptr)
+	{
+		NLOGWARNING(niceName, "Port is null, not sending");
+		return;
+	}
+
+	if (!port->isOpen())
+	{
+		NLOGWARNING(niceName, "Port is not open");
+		return;
+	}
+
+	port->writeString("s\n");
+
+}
+
+void SerialOutput::sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p)
 {
 	if (port == nullptr)
 	{
@@ -102,7 +121,7 @@ void SerialOutput::sendPatternDataInternal(int groupID, Pattern* p)
 		(uint8_t)(p->lfo4->floatValue() * 255)
 	};
 
-	String message = "p";
+	String message = publicGroup?"P":"p";
 	for (int i = 0; i < 13; i++)
 	{
 		if (i > 0) message += ",";
@@ -114,13 +133,26 @@ void SerialOutput::sendPatternDataInternal(int groupID, Pattern* p)
 	port->writeString(message);
 
 
-	if (logOutput->boolValue())
+	if (logOutgoing->boolValue())
 	{
 		NLOG(niceName, "Send " + message);
 	}
 }
 
+void SerialOutput::portRemoved(SerialDevice* p)
+{
+	setCurrentPort(nullptr);
+}
+
+void SerialOutput::portClosed(SerialDevice* p)
+{
+	setCurrentPort(nullptr);
+}
+
 void SerialOutput::serialDataReceived(const var& data)
 {
-	LOG("Data received  : " << data.toString());
+	if (logIncoming->boolValue())
+	{
+		LOG("Data received  : " << data.toString());
+	}
 }

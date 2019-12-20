@@ -14,14 +14,21 @@
 Output::Output(const String &name) :
 	BaseItem(name)
 {
-	logOutput = addBoolParameter("Log Output", "If checked, it will output the data sent to the bridge", false);
+	logIncoming = addBoolParameter("Log Incoming", "If checked, it will show the data sent from the bridge", false);
+	logOutgoing = addBoolParameter("Log Outgoing", "If checked, it will output the data sent to the bridge", false);
+	syncTrigger = addTrigger("Sync", "Synchronize private groups");
 }
 
 Output::~Output()
 {
 }
 
-void Output::sendPatternData(int groupID, Pattern * p)
+void Output::onContainerTriggerTriggered(Trigger* t)
+{
+	if (t == syncTrigger) sendSync();
+}
+
+void Output::sendPatternData(int groupID, bool publicGroup, Pattern * p)
 {
 	if (!enabled->boolValue()) return;
 
@@ -30,5 +37,5 @@ void Output::sendPatternData(int groupID, Pattern * p)
 		LOGWARNING("Pattern null !");
 		return;
 	}
-	sendPatternDataInternal(groupID, p);
+	sendPatternDataInternal(groupID, publicGroup, p);
 }

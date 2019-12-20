@@ -25,5 +25,5 @@ public:
 
 	Factory<Output> factory;
 
-	void sendPatternData(int groupID, Pattern * p);
+	void sendPatternData(int groupID, bool publicGroup, Pattern * p);
 };

@@ -23,7 +23,7 @@ public:
 	StringParameter* remoteHost;
 	IntParameter* remotePort;
 
-	void sendPatternDataInternal(int groupID, Pattern* p) override;
+	void sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p) override;
 
 	String getTypeString() const override { return "OSC"; }
 	static OSCOutput* create(var params) { return new OSCOutput(); }

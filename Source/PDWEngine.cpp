@@ -14,6 +14,7 @@
 #include "Output/OutputManager.h"
 #include "Audio/AudioManager.h"
 #include "Timeline/PatternSequence.h"
+#include "Serial/SerialManager.h"
 
 PDWEngine::PDWEngine() :
 	Engine("PropzDatWorkz", ".pdw")
@@ -42,6 +43,7 @@ PDWEngine::~PDWEngine()
 	SequenceManager::deleteInstance();
 	OutputManager::deleteInstance();
 	AudioManager::deleteInstance();
+	SerialManager::deleteInstance();
 
 	//BentoWebServer::deleteInstance();
 }

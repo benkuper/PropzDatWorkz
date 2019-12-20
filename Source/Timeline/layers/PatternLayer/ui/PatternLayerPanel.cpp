@@ -17,7 +17,9 @@ PatternLayerPanel::PatternLayerPanel(PatternLayer * patternLayer) :
 {
 	colorUI->setVisible(false);
 	groupUI.reset(patternLayer->groupID->createStepper());
+	publicUI.reset(patternLayer->groupIsPublic->createToggle());
 	addAndMakeVisible(groupUI.get());
+	addAndMakeVisible(publicUI.get());
 }
 
 PatternLayerPanel::~PatternLayerPanel()
@@ -27,4 +29,5 @@ PatternLayerPanel::~PatternLayerPanel()
 void PatternLayerPanel::resizedInternalContent(Rectangle<int>& r)
 {
 	groupUI->setBounds(r.removeFromTop(20));
+	publicUI->setBounds(r.removeFromTop(20));
 }

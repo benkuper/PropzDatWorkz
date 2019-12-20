@@ -21,6 +21,7 @@ public:
 	PatternClip * currentClip;
 	WeakReference<Inspectable> currentClipRef;
 	IntParameter * groupID;
+	BoolParameter* groupIsPublic;
 	
 	PatternClipManager patternClipManager;
 
