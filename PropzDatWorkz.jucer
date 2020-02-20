@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="ejtKyF" name="PropzDatWorkz" projectType="guiapp" jucerVersion="5.4.5"
-              headerPath="../../Source">
+<JUCERPROJECT id="ejtKyF" name="PropzDatWorkz" projectType="guiapp" jucerVersion="5.4.7"
+              headerPath="../../Source" version="1.0.2">
   <MAINGROUP id="FUlWkM" name="PropzDatWorkz">
     <GROUP id="{CD1DD829-377A-2D37-27D0-2AC84D3423D3}" name="Resources">
       <GROUP id="{FEC29756-3845-9543-B2FA-5B33A66FB9FB}" name="patterns">

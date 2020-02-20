@@ -102,7 +102,7 @@ void SerialOutput::sendPatternDataInternal(int groupID, bool publicGroup, Patter
 	}
 
 	const uint8_t values[13]{
-		groupID,
+		(uint8_t)groupID,
 		p->page,
 		p->mode,
 

@@ -1441,9 +1441,6 @@
     <ClCompile Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\misc\juce_RuntimePermissions.cpp">
       <Filter>JUCE Modules\juce_core\misc</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\misc\juce_StdFunctionCompat.cpp">
-      <Filter>JUCE Modules\juce_core\misc</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\misc\juce_Uuid.cpp">
       <Filter>JUCE Modules\juce_core\misc</Filter>
     </ClCompile>
@@ -1607,6 +1604,9 @@
       <Filter>JUCE Modules\juce_core\threads</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\threads\juce_TimeSliceThread.cpp">
+      <Filter>JUCE Modules\juce_core\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\threads\juce_WaitableEvent.cpp">
       <Filter>JUCE Modules\juce_core\threads</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\time\juce_PerformanceCounter.cpp">
@@ -2698,7 +2698,13 @@
     <ClCompile Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\recorder\AutomationRecorder.cpp">
       <Filter>JUCE Modules\juce_organicui\automation\recorder</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\Automation2DUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\automation\ui</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\AutomationEditor.cpp">
+      <Filter>JUCE Modules\juce_organicui\automation\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\AutomationKey2DUI.cpp">
       <Filter>JUCE Modules\juce_organicui\automation\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\AutomationKeyUI.cpp">
@@ -4488,9 +4494,6 @@
     <ClInclude Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\misc\juce_RuntimePermissions.h">
       <Filter>JUCE Modules\juce_core\misc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\misc\juce_StdFunctionCompat.h">
-      <Filter>JUCE Modules\juce_core\misc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\..\..\Softwares\JUCE\modules\juce_core\misc\juce_Uuid.h">
       <Filter>JUCE Modules\juce_core\misc</Filter>
     </ClInclude>
@@ -5622,6 +5625,9 @@
     <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\easing\ui\EasingUI.h">
       <Filter>JUCE Modules\juce_organicui\automation\easing\ui</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\easing\Bezier.h">
+      <Filter>JUCE Modules\juce_organicui\automation\easing</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\easing\Easing.h">
       <Filter>JUCE Modules\juce_organicui\automation\easing</Filter>
     </ClInclude>
@@ -5637,7 +5643,13 @@
     <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\recorder\AutomationRecorder.h">
       <Filter>JUCE Modules\juce_organicui\automation\recorder</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\Automation2DUI.h">
+      <Filter>JUCE Modules\juce_organicui\automation\ui</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\AutomationEditor.h">
+      <Filter>JUCE Modules\juce_organicui\automation\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\AutomationKey2DUI.h">
       <Filter>JUCE Modules\juce_organicui\automation\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\..\Perso\Projects\JUCE Modules\juce_organicui\automation\ui\AutomationKeyUI.h">
