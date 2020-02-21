@@ -23,6 +23,10 @@ public:
 	StringParameter* remoteHost;
 	IntParameter* remotePort;
 
+	void sendSync() override;
+	void sendStopSync() override;
+	void sendResetSync() override;
+
 	void sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p) override;
 
 	String getTypeString() const override { return "OSC"; }

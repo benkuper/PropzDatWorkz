@@ -18,9 +18,10 @@ PatternUI::PatternUI(Pattern * pattern) :
 	String s = pattern->niceName.toLowerCase().replace(" ", "_") + "_png";
 	int dataSize = 0;
 	
-	img = ImageCache::getFromMemory(BinaryData::getNamedResource(s.getCharPointer(), dataSize), dataSize);
+	const char* imgRes = BinaryData::getNamedResource(s.getCharPointer(), dataSize);
+	img = ImageCache::getFromMemory(imgRes, dataSize);
 
-	setRepaintsOnMouseActivity(true);
+	setRepaintsOnMouseActivity(true); 
 
 	setSize(40, 40);
 }

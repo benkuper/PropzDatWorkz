@@ -24,6 +24,27 @@ OSCOutput::~OSCOutput()
 {
 }
 
+void OSCOutput::sendSync()
+{
+	OSCMessage m("/sync");
+	if (logOutgoing->boolValue()) NLOG(niceName, "Send Sync");
+	sender.sendToIPAddress(remoteHost->stringValue(), remotePort->intValue(), m);
+}
+
+void OSCOutput::sendStopSync()
+{
+	OSCMessage m("/stopSync");
+	if (logOutgoing->boolValue()) NLOG(niceName, "Send Stop Sync");
+	sender.sendToIPAddress(remoteHost->stringValue(), remotePort->intValue(), m);
+}
+
+void OSCOutput::sendResetSync()
+{
+	OSCMessage m("/resetSync");
+	if (logOutgoing->boolValue()) NLOG(niceName, "Send Reset Sync"); 
+	sender.sendToIPAddress(remoteHost->stringValue(), remotePort->intValue(), m);
+}
+
 void OSCOutput::sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p)
 {
 	OSCMessage m("/pattern");

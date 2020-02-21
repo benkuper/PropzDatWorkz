@@ -69,7 +69,7 @@ void SerialOutput::onContainerParameterChangedInternal(Parameter* p)
 	}
 }
 
-void SerialOutput::sendSync()
+void SerialOutput::sendString(String s)
 {
 	if (port == nullptr)
 	{
@@ -83,28 +83,33 @@ void SerialOutput::sendSync()
 		return;
 	}
 
-	port->writeString("s\n");
+	if (logOutgoing->boolValue()) NLOG(niceName, "Send "+s);
+	port->writeString(s + "\n");
 
+}
+
+void SerialOutput::sendSync()
+{
+	sendString("s");
+
+}
+
+void SerialOutput::sendStopSync()
+{
+	sendString("S");
+}
+
+void SerialOutput::sendResetSync()
+{
+	sendString("a");
 }
 
 void SerialOutput::sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p)
 {
-	if (port == nullptr)
-	{
-		NLOGWARNING(niceName, "Port is null, not sending");
-		return;
-	}
-
-	if (!port->isOpen())
-	{
-		NLOGWARNING(niceName, "Port is not open");
-		return;
-	}
-
 	const uint8_t values[13]{
 		(uint8_t)groupID,
-		p->page,
-		p->mode,
+		(uint8_t)p->page,
+		(uint8_t)p->mode,
 
 		p->getActiveFlags(),
 
@@ -128,15 +133,10 @@ void SerialOutput::sendPatternDataInternal(int groupID, bool publicGroup, Patter
 		message += String(values[i]);
 	}
 
-	message += "\n";
 
-	port->writeString(message);
+	sendString(message);
 
 
-	if (logOutgoing->boolValue())
-	{
-		NLOG(niceName, "Send " + message);
-	}
 }
 
 void SerialOutput::portRemoved(SerialDevice* p)

@@ -36,7 +36,12 @@ public:
 	void serialDataReceived(const var& data) override;
 
 
+	void sendString(String s); 
+	
 	void sendSync() override;
+	void sendStopSync() override;
+	void sendResetSync() override;
+	
 	void sendPatternDataInternal(int groupID, bool publicGroup, Pattern* p) override;
 
 
